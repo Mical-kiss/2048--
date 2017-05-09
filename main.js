@@ -11,7 +11,6 @@ var startX= 0,
 $(document).ready(function () {
     prepareForMobile();
     newgame();
-    //alert('我们的游戏\n刚刚开始❤');
     });
 function prepareForMobile() {
     if(documentWidth>500){
@@ -187,7 +186,22 @@ function isgameover(){
     }
 }
 function gameover(){
-    alert('我们的游戏\n刚刚开始❤');
+    var nn=Math.ceil(Math.random()*4);
+    switch(nn){
+        case 1:alert('我们的游戏\n刚刚开始❤');
+            break;
+        case 2:alert('我不等你谁等你\n我不等你我等谁\n你不等我我等你');
+            break;
+        case 3: alert('从来不偷东西的你，却爱偷笑\n于是从来不偷东西的我\n便学会了偷看');
+            break;
+        case 4: alert('你有没有那么一刻，\n抱着某人，\n感觉就像拥有了整个世界。');
+        default:
+            break;
+    }
+
+
+
+
 }
 function moveLeft() {
     if (!canMoveLeft(board)) {
