@@ -6,6 +6,10 @@ html,body{
     left: 0;
     background-color: skyblue;
 }
+*{
+    margin: 0;
+    padding: 0;
+}
 header{
     margin: 0 auto;
     width:100%;
@@ -15,6 +19,7 @@ header h1{
     font-family:Arial;
     font-size:40px;
     font-weight:bold;
+    margin: 20px;
 }
 header #newgamebutton{
     display: block;
