@@ -14,8 +14,11 @@ $(document).ready(function () {
     });
 function prepareForMobile() {
     if(documentWidth>500){
+        //整个大方框
         gridContainerWidth=500;
+        //padding值
         cellSpace=20;
+        //小方块边长
         cellSlideLength=100;
     }
     $('#grid-container').css('width', gridContainerWidth - 2 * cellSpace);
@@ -213,6 +216,7 @@ function moveLeft() {
             if (board[i][j] != 0) {
                 for (k = 0; k < j; k++) {
                     if (board[i][k] == 0 && noBlockHorizontalX(i, k, j, board)) {
+                        $('#audio2').attr('src','1701.mp3');
                         showMoveAnimation(i, j, i, k);
                         board[i][k] = board[i][j];
                         //console.log('左边为零的情况');
@@ -220,6 +224,7 @@ function moveLeft() {
                         continue;
                     }
                     else if (board[i][k] == board[i][j] && noBlockHorizontalX(i, k, j, board)&&flag==0) {
+                        $('#audio1').attr('src','14.mp3');
                         showMoveAnimation(i, j, i, k);
                         board[i][k] += board[i][j];
                         //console.log('左边相等的情况');
@@ -248,6 +253,7 @@ function moveRight() {
             if (board[i][j] != 0) {
                 for (k = 3; k > j; k--) {
                     if (board[i][k] == 0 && noBlockHorizontalX(i, j, k, board)) {
+                        $('#audio2').attr('src','1701.mp3');
                         showMoveAnimation(i, j, i, k);
                         board[i][k] = board[i][j];
                         //console.log('左边为零的情况');
@@ -255,6 +261,7 @@ function moveRight() {
                         continue;
                     }
                     else if (board[i][k] == board[i][j] && noBlockHorizontalX(i, j, k, board)&&flag==0) {
+                        $('#audio1').attr('src','14.mp3');
                         showMoveAnimation(i, j, i, k);
                         board[i][k] += board[i][j];
                         //console.log('左边相等的情况');
@@ -283,6 +290,7 @@ function moveUp() {
             if (board[j][i] != 0) {
                 for (k = 0; k < j; k++) {
                     if (board[k][i] == 0 && noBlockHorizontalY(i, k, j, board)) {
+                        $('#audio2').attr('src','1701.mp3');
                         showMoveAnimation(j, i, k, i);
                         board[k][i] = board[j][i];
                         //console.log('左边为零的情况');
@@ -290,6 +298,7 @@ function moveUp() {
                         continue;
                     }
                     else if (board[k][i] == board[j][i] && noBlockHorizontalY(i, k, j, board)&&flag==0) {
+                        $('#audio1').attr('src','14.mp3');
                         showMoveAnimation(j, i, k, i);
                         board[k][i] += board[j][i];
                         //console.log('左边相等的情况');
@@ -318,12 +327,14 @@ function moveDown(){
             if(board[j][i]!=0){
                 for(k=3;k>j;k--){
                     if(board[k][i]==0&&noBlockHorizontalY(i, j, k, board)){
+                        $('#audio2').attr('src','1701.mp3');
                         showMoveAnimation(j,i,k,i);
                         board[k][i]=board[j][i];
                         board[j][i]=0;
                         continue;
                     }
-                    if(board[k][i]==board[j][i]&&noBlockHorizontalY(i, j, k, board)&&flag==0){
+                    else if(board[k][i]==board[j][i]&&noBlockHorizontalY(i, j, k, board)&&flag==0){
+                        $('#audio1').attr('src','14.mp3');
                         showMoveAnimation(j,i,k,i);
                         board[k][i]+=board[j][i];
                         board[j][i]=0;

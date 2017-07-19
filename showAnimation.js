@@ -14,7 +14,7 @@ function showNumberWithAnimation(i,j,randNumber){
         height:cellSlideLength,
         top:getPosTop(i,j),
         left:getPosLeft(i,j)
-    },100)
+    },200)
 }
 function showMoveAnimation(fromx,fromy,tox,toy){
     var numberCell=$('#number-cell-'+fromx+'-'+fromy);
