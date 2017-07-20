@@ -9,7 +9,6 @@ var startX= 0,
     endX= 0,
     endY=0;
 window.onload=function(){
-    $('#main').addClass('dn');
     $('#box1').removeClass('dn');
     $('#box1').addClass('message-container1');
     $('#box2').addClass('message1');
@@ -20,6 +19,7 @@ window.onload=function(){
     newgame();
 }
 $(document).ready(function () {
+    $('#main').addClass('dn');
     prepareForMobile();
     });
 function prepareForMobile() {
