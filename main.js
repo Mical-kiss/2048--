@@ -9,14 +9,14 @@ var startX= 0,
     endX= 0,
     endY=0;
 window.onload=function(){
-    $('#grid-container').addClass('dn');
+    $('#main').addClass('dn');
     $('#box1').removeClass('dn');
     $('#box1').addClass('message-container1');
     $('#box2').addClass('message1');
     setTimeout(function(){
         $('#box1').addClass('dn');
-    },6000);
-    $('#grid-container').removeClass('dn');
+        $('#main').removeClass('dn');
+    },3000);
     newgame();
 }
 $(document).ready(function () {

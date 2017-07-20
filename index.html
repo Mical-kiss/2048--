@@ -11,16 +11,17 @@
     <script src="showAnimation.js"></script>
 </head>
 <body>
-    <header>
-        <h1>2048</h1>
-        <a href="javascript:newgame();" id="newgamebutton">New Game</a>
-        <p>score: <span id="score">0</span></p>
-    </header>
     <div class="dn" id="box1">
         <div class="message" id="box2">
             哈！哈！哈！靓照
         </div>
     </div>
+<div id="main">
+    <header>
+        <h1>2048</h1>
+        <a href="javascript:newgame();" id="newgamebutton">New Game</a>
+        <p>score: <span id="score">0</span></p>
+    </header>
     <div id="grid-container">
         <div class="grid-cell" id="grid-cell-0-0"></div>
         <div class="grid-cell" id="grid-cell-0-1"></div>
@@ -42,6 +43,7 @@
         <div class="grid-cell" id="grid-cell-3-2"></div>
         <div class="grid-cell" id="grid-cell-3-3"></div>
     </div>
+</div>
     <audio id="audio1" muted autoplay loop src="14.mp3">
         <source>
     </audio>
