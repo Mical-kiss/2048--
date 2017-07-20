@@ -11,10 +11,10 @@ html,body,ul,li,ol,dl,dd,dt,p,h1,h2,h3,h4,h5,h6,form,fieldset,legend,img {
     padding: 0
 }
 .dn{
-    display: none;
+    display: none!important;
 }
 .message-container1{
-    display: block;
+    /*display: block;*/
     width: 100%;
     height: 100%;
     position: fixed;
