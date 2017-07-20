@@ -6,9 +6,50 @@ html,body{
     left: 0;
     background-color: skyblue;
 }
-*{
+html,body,ul,li,ol,dl,dd,dt,p,h1,h2,h3,h4,h5,h6,form,fieldset,legend,img {
     margin: 0;
-    padding: 0;
+    padding: 0
+}
+.message-container{
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: url(aa.jpg) center center;
+    background-size: cover;
+    font-size:30px;
+    z-index: 88;
+    animation: move 6s ease forwards;
+}
+@keyframes move {
+    from{
+        opacity: 1;
+    }
+    to{
+        opacity: 0;
+    }
+
+}
+.message{
+    width: 100%;
+    line-height: 100%;
+    margin:80% auto;
+    text-align: center;
+    z-index: 999;
+    animation: move1 2s ease forwards;
+
+}
+@keyframes move1 {
+    0%{
+        transform:rotate(-360deg) scale(1);
+    }
+    50%{
+        transform:rotate(-180deg) scale(1.4);
+    }
+    100%{
+        transform:rotate(0deg) scale(1);
+    }
 }
 header{
     margin: 0 auto;

@@ -138,6 +138,7 @@ $(document).keydown(function (event) {
         default://default
             break;
     }
+    //setTimeout( $('#audio1').attr('muted',' '),1000);
 });
 
 document.addEventListener('touchstart', function (event) {
@@ -181,6 +182,7 @@ document.addEventListener('touchend', function (event) {
             } //down
         }
     }
+
 });
 
 function isgameover(){
@@ -216,7 +218,7 @@ function moveLeft() {
             if (board[i][j] != 0) {
                 for (k = 0; k < j; k++) {
                     if (board[i][k] == 0 && noBlockHorizontalX(i, k, j, board)) {
-                        $('#audio2').attr('src','1701.mp3');
+                        //$('#audio2').removeAttr('muted','');
                         showMoveAnimation(i, j, i, k);
                         board[i][k] = board[i][j];
                         //console.log('左边为零的情况');
@@ -224,7 +226,7 @@ function moveLeft() {
                         continue;
                     }
                     else if (board[i][k] == board[i][j] && noBlockHorizontalX(i, k, j, board)&&flag==0) {
-                        $('#audio1').attr('src','14.mp3');
+
                         showMoveAnimation(i, j, i, k);
                         board[i][k] += board[i][j];
                         //console.log('左边相等的情况');
@@ -253,7 +255,7 @@ function moveRight() {
             if (board[i][j] != 0) {
                 for (k = 3; k > j; k--) {
                     if (board[i][k] == 0 && noBlockHorizontalX(i, j, k, board)) {
-                        $('#audio2').attr('src','1701.mp3');
+                        //$('#audio2').removeAttr('muted','');
                         showMoveAnimation(i, j, i, k);
                         board[i][k] = board[i][j];
                         //console.log('左边为零的情况');
@@ -261,7 +263,7 @@ function moveRight() {
                         continue;
                     }
                     else if (board[i][k] == board[i][j] && noBlockHorizontalX(i, j, k, board)&&flag==0) {
-                        $('#audio1').attr('src','14.mp3');
+
                         showMoveAnimation(i, j, i, k);
                         board[i][k] += board[i][j];
                         //console.log('左边相等的情况');
@@ -290,7 +292,7 @@ function moveUp() {
             if (board[j][i] != 0) {
                 for (k = 0; k < j; k++) {
                     if (board[k][i] == 0 && noBlockHorizontalY(i, k, j, board)) {
-                        $('#audio2').attr('src','1701.mp3');
+                        //$('#audio2').removeAttr('muted','');
                         showMoveAnimation(j, i, k, i);
                         board[k][i] = board[j][i];
                         //console.log('左边为零的情况');
@@ -298,7 +300,7 @@ function moveUp() {
                         continue;
                     }
                     else if (board[k][i] == board[j][i] && noBlockHorizontalY(i, k, j, board)&&flag==0) {
-                        $('#audio1').attr('src','14.mp3');
+
                         showMoveAnimation(j, i, k, i);
                         board[k][i] += board[j][i];
                         //console.log('左边相等的情况');
@@ -327,14 +329,14 @@ function moveDown(){
             if(board[j][i]!=0){
                 for(k=3;k>j;k--){
                     if(board[k][i]==0&&noBlockHorizontalY(i, j, k, board)){
-                        $('#audio2').attr('src','1701.mp3');
+                        //$('#audio2').removeAttr('muted','');
                         showMoveAnimation(j,i,k,i);
                         board[k][i]=board[j][i];
                         board[j][i]=0;
                         continue;
                     }
                     else if(board[k][i]==board[j][i]&&noBlockHorizontalY(i, j, k, board)&&flag==0){
-                        $('#audio1').attr('src','14.mp3');
+
                         showMoveAnimation(j,i,k,i);
                         board[k][i]+=board[j][i];
                         board[j][i]=0;
