@@ -9,16 +9,17 @@ var startX= 0,
     endX= 0,
     endY=0;
 window.onload=function(){
-    $('#box1').removeClass('message-container');
+    $('#box1').removeClass('dn');
     $('#box1').addClass('message-container1');
     $('#box2').addClass('message1');
     setTimeout(function(){
-        $('#box1').addClass('message-container');
+        $('#box1').addClass('dn');
     },6000);
+
+    newgame();
 }
 $(document).ready(function () {
     prepareForMobile();
-    newgame();
     });
 function prepareForMobile() {
     if(documentWidth>500){
