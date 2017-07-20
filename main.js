@@ -14,7 +14,7 @@ window.onload=function(){
     $('#box2').addClass('message1');
     setTimeout(function(){
         $('#box1').addClass('dn');
-        $('#main').removeClass('dn');
+        $('#before').addClass('dn');
     },3000);
     newgame();
 }
