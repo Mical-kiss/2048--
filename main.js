@@ -19,7 +19,6 @@ window.onload=function(){
     newgame();
 }
 $(document).ready(function () {
-    $('#main').addClass('dn');
     prepareForMobile();
     });
 function prepareForMobile() {
