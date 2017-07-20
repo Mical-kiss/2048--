@@ -11,7 +11,7 @@ html,body,ul,li,ol,dl,dd,dt,p,h1,h2,h3,h4,h5,h6,form,fieldset,legend,img {
     padding: 0
 }
 .message-container{
-    display: none!important;
+    display: none;
 }
 .message-container1{
     display: block;
