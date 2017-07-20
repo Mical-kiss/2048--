@@ -8,7 +8,7 @@ var startX= 0,
     startY= 0,
     endX= 0,
     endY=0;
-$(document).ready(function () {
+window.onload=function(){
     $('#box1').addClass('message-container1');
     $('#box2').addClass('message1');
     setTimeout(function(){
@@ -16,7 +16,16 @@ $(document).ready(function () {
     },6000);
     prepareForMobile();
     newgame();
-    });
+}
+/*$(document).ready(function () {
+    $('#box1').addClass('message-container1');
+    $('#box2').addClass('message1');
+    setTimeout(function(){
+        $('#box1').addClass('message-container');
+    },6000);
+    prepareForMobile();
+    newgame();
+    });*/
 function prepareForMobile() {
     if(documentWidth>500){
         //整个大方框
