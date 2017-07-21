@@ -32,8 +32,8 @@ html,body,ul,li,ol,dl,dd,dt,p,h1,h2,h3,h4,h5,h6,form,fieldset,legend,img {
     position: fixed;
     top: 0;
     left: 0;
-    background: url(aa.jpg) center center;
-    /*background: red;*/
+    /*background: url(aa.jpg) center center;*/
+    background: rgb(225,225,0,0.5);
     background-size: cover;
     font-size:30px;
     z-index: 88;
@@ -52,7 +52,7 @@ html,body,ul,li,ol,dl,dd,dt,p,h1,h2,h3,h4,h5,h6,form,fieldset,legend,img {
 .message1{
     width: 100%;
     line-height: 100%;
-    margin:80% auto;
+    margin:40% auto;
     text-align: center;
     z-index: 999;
     animation: move1 2s linear forwards;
