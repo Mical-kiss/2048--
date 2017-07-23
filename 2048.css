@@ -52,7 +52,7 @@ html,body,ul,li,ol,dl,dd,dt,p,h1,h2,h3,h4,h5,h6,form,fieldset,legend,img {
 .message1{
     width: 100%;
     line-height: 100%;
-    margin:40% auto;
+    margin:60% auto;
     text-align: center;
     z-index: 999;
     animation: move1 2s linear forwards;
