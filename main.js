@@ -11,8 +11,8 @@ var startX= 0,
     endY=0;
 window.onload=function(){
     $('#box1').removeClass('dn');
-    $('#box1').addClass('message-container1');
-    $('#box2').addClass('message1');
+    $('#box1').addClass('message-container');
+    $('#box2').addClass('message');
     setTimeout(function(){
         $('#box1').addClass('dn');
         $('#before').addClass('dn');
